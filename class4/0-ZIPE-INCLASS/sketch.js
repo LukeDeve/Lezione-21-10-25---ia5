@@ -96,3 +96,12 @@ function draw() {
   tempo += 1;
 
 }
+
+//fermiano o facciamo ripartire l'animazione
+function mousePressed (){
+  if(isLooping()){
+    noLoop();
+  } else {
+    loop();
+  }
+}
