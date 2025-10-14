@@ -139,7 +139,7 @@ function draw() {
 
 }
 
-
+//determina se il mouse è o non è sopra al razzo
 function isMouseOverRocket() { 
   return (mouseX > xRocket-(rocketWidth/2) &&
           mouseX < xRocket + (rocketWidth/2) &&
