@@ -17,8 +17,10 @@ function preload() {
 
 function setup() {
   createCanvas(xMax, yMax);
-  frameRate(30);
+  frameRate(15);
+  angleMode(DEGREES);
 }
+
 
 function drawStarsFromFile() {
   for(let k = 0; k < table.getRowCount(); k++) {
@@ -45,7 +47,8 @@ function drawRocket(xRocket, yRocket, scalaB=1, ruota=30) {
   stroke(40);           // dark outline
   strokeWeight(2);
   rectMode(CENTER);     // rectangle drawn from its center
-  rect(0, 0+30, 80, 180, 20); // body rectangle with rounded corners
+  //rect(0, 0+30, 80, 180, 20); // body rectangle with rounded corners
+  rect(xRocket, yRocket+30, 80, 180, 20);
   // nose cone
   fill(200, 40, 40);    // red
   triangle(xRocket-40, yRocket-60, xRocket+40, yRocket-60, xRocket, yRocket-120); // triangle on top
@@ -90,6 +93,6 @@ function draw() {
 
   xRocket = (xRocket +1) % xMax;
   yRocket = moveRocket(yRocket); 
-  //tempo += 1;
+  tempo += 1;
 
 }
