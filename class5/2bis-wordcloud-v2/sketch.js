@@ -50,6 +50,7 @@ function draw() {
   // Once all words placed, stop animating
   if (drawIndex >= words.length) {
     animating = false;
+    //noLoop()
   }
 }
 
